@@ -1,0 +1,39 @@
+
+class Guitar():
+    def __init__(self, n_strings=6) -> None:
+        self.n_strings = n_strings
+        # self.play()
+        self.__cost = 50
+    def play(self):
+        print("pam pam pam")
+
+
+class BassGuitar(Guitar):
+    pass
+
+
+class ElectricGuitar(Guitar):
+    def __init__(self, n_strings=6) -> None:
+        # super().__init__(n_strings = 8)
+        super().__init__()
+        self.n_strings = n_strings
+        self.colour = ("#000000", "#FFFFFF")
+    def PlayLouder(self):
+        print("pam pam pam pam".upper())
+    def __secret(self):
+        print("The cost $", self._Guitar__cost, "!")
+
+
+
+# myE = ElectricGuitar()
+# myG._ElectricGuitar__secret()
+# print(myG._ElectricGuitar__cost)
+# print("child: ", myG.n_strings)
+# print("parent: ", Guitar().n_strings)
+# myBG = BassGuitar(4)
+# print("My Bass has ", BassGuitar(4).n_strings, " string.")
+# print("My ElecGuit has ", myE.n_strings, " strings!")
+
+print(Guitar(5).n_strings)
+print(BassGuitar(4).n_strings)
+print(ElectricGuitar(7).n_strings)
